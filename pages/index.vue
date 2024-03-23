@@ -73,115 +73,27 @@
         <div
           class="logo w-24"
           v-html="require(`~/assets/icons/logo.svg?include`)"
-          title="EnBizCard - An Open-Source Digital Business Card Generator"
+          title="The Oaks Business Card Generator"
         ></div>
-        <a
-          class="
-            font-extrabold
-            tracking-wide
-            leading-none
-            shrink-0
-            p-3
-            border-2
-            text-white
-            border-gray-700
-            rounded
-            hover:bg-gray-700
-            focus:bg-gray-700
-            transition-colors
-            duration-200
-          "
-          href="https://www.vishnuraghav.com/donate"
-          target="_blank"
-          rel="noreferrer"
-          >Donate</a
-        >
+
       </div>
       <h1
         class="
           text-3xl
           md:text-5xl
           font-extrabold
-          mt-24
-          md:mt-48 md:leading-tight
+          mt-6
+          md:mt-12 md:leading-tight
         "
       >
-        Why Pay When Your Website Can Host Your Digital Business Cards for Free!
+        The Oaks Business Card Generator
       </h1>
-      <p class="mt-8 text-lg md:text-xl w-full md:w-3/4 text-gray-200">
-        EnBizCard helps you create beautiful, responsive HTML&#8209;based
-        digital business cards that can be hosted on your website.
-      </p>
-      <ul class="mt-4 text-gray-400">
-        <li>-&ensp;No sign-up required</li>
-        <li>-&ensp;100% free and open-source</li>
-        <li>-&ensp;No user tracking and data collection</li>
-        <li>-&ensp;Works offline</li>
-      </ul>
+     
       <div class="mt-4 flex flex-wrap items-center">
-        <button
-          class="
-            font-extrabold
-            leading-none
-            text-lg
-            tracking-wide
-            select-none
-            shrink-0
-            p-5
-            mt-2
-            mr-2
-            text-white
-            bg-emerald-600
-            rounded
-            hover:bg-emerald-500
-            focus:bg-emerald-500
-            transition-colors
-            duration-200
-            focus:outline-none
-          "
-          @click="create()"
-        >
-          Create your own
-        </button>
-        <a
-          class="
-            font-extrabold
-            leading-none
-            text-lg
-            tracking-wide
-            shrink-0
-            p-5
-            mt-2
-            text-white
-            bg-gray-700
-            rounded
-            hover:bg-gray-600
-            focus:bg-gray-600
-            transition-colors
-            duration-200
-          "
-          href="/demo"
-          target="_blank"
-          >View demo</a
-        >
+
+
       </div>
-      <p class="mt-6">
-        Read the
-        <NuxtLink
-          to="/hosting-guide"
-          class="
-            cursor-pointer
-            underline
-            font-extrabold
-            text-emerald-600
-            hover:text-emerald-500
-            focus:text-emerald-500
-            transition-colors
-            duration-200
-          "
-          >Hosting Guide</NuxtLink
-        >
-      </p>
+     
     </div>
     <div class="md:grid md:grid-cols-2">
       <div class="px-4 mt-32">
@@ -393,39 +305,7 @@
               rows="4"
             ></textarea>
           </div>
-          <div class="stepC relative mt-6">
-            <label for="pgp-public-key" class="flex justify-between ml-4"
-              >OpenPGP public key<span
-                v-if="genInfo.key"
-                class="mr-4"
-                :class="pubKeyIsValid ? 'text-emerald-500' : 'text-red-600'"
-                >{{ pubKeyIsValid ? 'Valid' : 'Invalid schema' }}</span
-              >
-            </label>
-            <textarea
-              id="pgp-public-key"
-              v-model="genInfo.key"
-              class="
-                block
-                mt-2
-                px-4
-                py-3
-                w-full
-                bg-black
-                placeholder-gray-600
-                rounded
-                border border-transparent
-                transition-colors
-                duration-200
-                focus:outline-none focus:border-gray-600
-                resize-none
-                hover:border-gray-600
-              "
-              rows="4"
-              spellcheck="false"
-              placeholder="Paste public key block here"
-            ></textarea>
-          </div>
+
         </div>
         <div id="step-3" class="mt-16">
           <h2 class="font-extrabold text-2xl">Primary actions</h2>
@@ -971,7 +851,7 @@
           :downloadChecked="downloadChecked"
           :downloadPackage="downloadPackage"
         />
-        <Help />
+        
       </div>
       <div
         id="preview-container"
@@ -1008,7 +888,7 @@
                     class="pl-4 h-12 w-full bg-black rounded text-gray-500"
                     aria-label="vCard URL"
                     disabled
-                    :value="'https://yoursite/vcard/' + username"
+                    :value="'https://theoaks.link/vcard/' + username"
                     tabindex="-1"
                   />
                   <div
@@ -1041,7 +921,7 @@
       </div>
     </div>
     <Vcard ref="vCard" :vCard="vCard" />
-    <Footer />
+
   </div>
 </template>
 
@@ -1090,15 +970,15 @@ export default {
         {
           label:
             'I did not attach any link or file that will cause any risk to the user',
-          checked: false,
+          checked: true,
         },
         {
           label: 'I have verified that all the links are working correctly',
-          checked: false,
+          checked: true,
         },
         {
           label: 'I have removed all unused fields and sections',
-          checked: false,
+          checked: true,
         },
       ],
       images: {
@@ -1126,7 +1006,7 @@ export default {
       },
       colors: {
         logoBg: {
-          color: `#059669`,
+          color: `#2d364c`,
           openPalette: false,
         },
         mainBg: {
@@ -1134,7 +1014,7 @@ export default {
           openPalette: false,
         },
         buttonBg: {
-          color: `#059669`,
+          color: `#fb4672`,
           openPalette: false,
         },
         cardBg: {
@@ -1147,7 +1027,7 @@ export default {
         lname: null,
         pronouns: null,
         title: null,
-        biz: null,
+        biz: "The Oaks Specialist College",
         addr: null,
         desc: null,
         key: null,
@@ -1155,7 +1035,19 @@ export default {
         fontLink: null,
         fontCss: null,
       },
-      primaryActions: [],
+      primaryActions: [
+        {
+          name: 'Office',
+          icon: 'call',
+          value: '01732 207950',
+          href: 'tel:+441732207950'
+        },
+        {
+          name: 'Website',
+          icon: 'website',
+          value: 'https://www.theoaks.ac.uk'
+        }
+      ],
       filterPrimary: '',
       secondaryActions: [],
       filterSecondary: '',
@@ -1725,13 +1617,10 @@ export default {
         ],
       },
       featured: [
-        {
-          title: 'Section title',
-          content: [],
-        },
+
       ],
       hostedURL: null,
-      footerCredit: true,
+      footerCredit: false,
       PreviewMode: true,
       content: null,
       inView: false,
