@@ -70,11 +70,7 @@
 
     <div class="px-4">
       <div class="flex items-start justify-between pt-8">
-        <div
-          class="logo w-24"
-          v-html="require(`~/assets/icons/logo.svg?include`)"
-          title="The Oaks Business Card Generator"
-        ></div>
+
 
       </div>
       <h1

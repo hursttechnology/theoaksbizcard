@@ -21,7 +21,7 @@
         "
         :class="
           downloadChecked
-            ? 'bg-emerald-600 cursor-pointer text-white focus:bg-emerald-500 hover:bg-emerald-500'
+            ? 'bg-slate-500 cursor-pointer text-white focus:bg-slate-400 hover:bg-slate-400'
             : 'cursor-not-allowed text-black'
         "
       >
