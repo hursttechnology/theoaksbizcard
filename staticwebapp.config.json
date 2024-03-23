@@ -2,7 +2,7 @@
     "routes": [
       {
         "route": "/*",
-        "allowedRoles": ["cardgenerator"]
+        "allowedRoles": ["cardaccess"]
       }
     ],
     "responseOverrides": {
