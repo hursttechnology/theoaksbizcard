@@ -1036,16 +1036,41 @@ export default {
           name: 'Office',
           icon: 'call',
           value: '01732 207950',
-          href: 'tel:+441732207950'
+          href: 'tel:'
+        },
+        {
+          name: 'Email',
+          icon: 'email',
+          href: 'mailto:',
+          placeholder: 'forename.surname@theoaks.ac.uk',
+          label: 'Email address'
         },
         {
           name: 'Website',
           icon: 'website',
           value: 'https://www.theoaks.ac.uk'
-        }
+        },
+        {
+            name: 'Location',
+            icon: 'location',
+            value: 'https://what3words.com/myself.update.translated',
+            label: 'what3words',
+            isURL: 1,
+          },
+
       ],
       filterPrimary: '',
-      secondaryActions: [],
+      secondaryActions: [
+      {
+            name: 'LinkedIn',
+            icon: 'linkedin',
+            href: 'https://linkedin.com/',
+            placeholder: 'in/username or company/companyname',
+            value: null,
+            color: '#0077b5',
+            label: 'Linkedin username or companyname',
+          },
+      ],
       filterSecondary: '',
       actions: {
         primaryActions: [
