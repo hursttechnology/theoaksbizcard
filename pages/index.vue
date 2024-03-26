@@ -1028,8 +1028,8 @@ export default {
         desc: null,
         key: null,
         tracker: null,
-        fontLink: null,
-        fontCss: null,
+        fontLink: '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">',
+        fontCss: 'font-family: "Inter"; sans-serif',
       },
       primaryActions: [
         {
@@ -1066,7 +1066,7 @@ export default {
             icon: 'linkedin',
             href: 'https://linkedin.com/',
             placeholder: 'in/username or company/companyname',
-            value: null,
+            value: 'company/the-oaks-specialist-college-kent',
             color: '#0077b5',
             label: 'Linkedin username or companyname',
           },
